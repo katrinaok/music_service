@@ -15,7 +15,7 @@
 ---
 
 ## Структура проєкту
-'''
+```
 music_service/
 ├── node_modules/ # Залежності Node.js
 ├── sql/
@@ -71,7 +71,7 @@ music_service/
 ├── package.json
 ├── package-lock.json
 └── README.md
-'''
+```
 
 ---
 
