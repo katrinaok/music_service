@@ -16,68 +16,57 @@
 
 ## Структура проєкту
 music_service/
-│
-├── node_modules/              # Залежності Node.js
+├── node_modules/ # Залежності Node.js
 ├── sql/
-│   └── dump.sql               # SQL-дамп бази даних
-│
+│ └── dump.sql # SQL-дамп бази даних
 ├── src/
-│   ├── backend/
-│   │   ├── config/
-│   │   │   └── config.js      # Підключення до бази даних
-│   │   │
-│   │   ├── controllers/       # Логіка обробки запитів
-│   │   │   ├── albums_controller.js
-│   │   │   ├── artists_controller.js
-│   │   │   ├── favorites_controller.js
-│   │   │   ├── genres_controller.js
-│   │   │   ├── playlist_tracks_controller.js
-│   │   │   ├── playlists_controller.js
-│   │   │   ├── tracks_controller.js
-│   │   │   └── users_controller.js
-│   │   │
-│   │   ├── middlewares/
-│   │   │   └── upload.js      # Налаштування multer для завантаження файлів
-│   │   │
-│   │   ├── models/            # Запити до бази даних
-│   │   │   ├── albums_model.js
-│   │   │   ├── artists_model.js
-│   │   │   ├── favorites_model.js
-│   │   │   ├── genres_model.js
-│   │   │   ├── playlist_tracks_model.js
-│   │   │   ├── playlists_model.js
-│   │   │   ├── tracks_model.js
-│   │   │   └── users_model.js
-│   │   │
-│   │   ├── routes/            # Маршрути API
-│   │   │   ├── albums.js
-│   │   │   ├── artists.js
-│   │   │   ├── favorites.js
-│   │   │   ├── genres.js
-│   │   │   ├── playlist_tracks.js
-│   │   │   ├── playlists.js
-│   │   │   ├── tracks.js
-│   │   │   └── users.js
-│   │   │
-│   │   ├── uploads/           # Завантажені файли
-│   │   │   ├── albums/
-│   │   │   ├── artists/
-│   │   │   ├── playlists/
-│   │   │   └── tracks/
-│   │   │
-│   │   ├── app.js             # Головний файл застосунку (Express)
-│   │   ├── server.js          # Запуск сервера
-│   │   └── .env               # Налаштування середовища
-│   │
-│   └── public/                # Клієнтська частина
-│       ├── assets/
-│       │   ├── css/
-│       │   │   └── style.css
-│       │   └── js/
-│       │       └── script.js
-│       │
-│       └── index.html
-│
+│ ├── backend/
+│ │ ├── config/
+│ │ │ └── config.js # Підключення до бази даних
+│ │ ├── controllers/ # Логіка обробки запитів
+│ │ │ ├── albums_controller.js
+│ │ │ ├── artists_controller.js
+│ │ │ ├── favorites_controller.js
+│ │ │ ├── genres_controller.js
+│ │ │ ├── playlist_tracks_controller.js
+│ │ │ ├── playlists_controller.js
+│ │ │ ├── tracks_controller.js
+│ │ │ └── users_controller.js
+│ │ ├── middlewares/
+│ │ │ └── upload.js # Налаштування multer для завантаження файлів
+│ │ ├── models/ # Запити до бази даних
+│ │ │ ├── albums_model.js
+│ │ │ ├── artists_model.js
+│ │ │ ├── favorites_model.js
+│ │ │ ├── genres_model.js
+│ │ │ ├── playlist_tracks_model.js
+│ │ │ ├── playlists_model.js
+│ │ │ ├── tracks_model.js
+│ │ │ └── users_model.js
+│ │ ├── routes/ # Маршрути API
+│ │ │ ├── albums.js
+│ │ │ ├── artists.js
+│ │ │ ├── favorites.js
+│ │ │ ├── genres.js
+│ │ │ ├── playlist_tracks.js
+│ │ │ ├── playlists.js
+│ │ │ ├── tracks.js
+│ │ │ └── users.js
+│ │ ├── uploads/ # Завантажені файли
+│ │ │ ├── albums/
+│ │ │ ├── artists/
+│ │ │ ├── playlists/
+│ │ │ └── tracks/
+│ │ ├── app.js # Головний файл застосунку (Express)
+│ │ ├── server.js # Запуск сервера
+│ │ └── .env # Налаштування середовища
+│ └── public/ # Клієнтська частина
+│ ├── assets/
+│ │ ├── css/
+│ │ │ └── style.css
+│ │ └── js/
+│ │ └── script.js
+│ └── index.html
 ├── package.json
 ├── package-lock.json
 └── README.md
