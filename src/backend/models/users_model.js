@@ -1,4 +1,5 @@
 import db from "../config/config.js";
+import bcrypt from "bcrypt";
 
 const User = {
   async getAll() {
@@ -13,7 +14,9 @@ const User = {
 
   async create(data) {
     const { username, email, password, role } = data;
-    
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
     const [countRows] = await db.query("SELECT COUNT(*) AS count FROM users");
     if (countRows[0].count === 0) {
       await db.query("ALTER TABLE users AUTO_INCREMENT = 1");
@@ -21,21 +24,24 @@ const User = {
 
     const [result] = await db.query(
       "INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)",
-      [username, email, password, role]
+      [username, email, hashedPassword, role || "user"]
     );
 
     return { id: result.insertId };
   },
 
-  async findByLogin(identifier, password) {
+  async findByLogin(identifier) {
     const [results] = await db.query(
-      "SELECT * FROM users WHERE (username = ? OR email = ?) AND password = ?",
-      [identifier, identifier, password]
+      "SELECT * FROM users WHERE username = ? OR email = ?",
+      [identifier, identifier]
     );
     return results[0];
   },
 
   async update(id, data) {
+    if (data.password) {
+      data.password = await bcrypt.hash(data.password, 10);
+    }
     const [result] = await db.query("UPDATE users SET ? WHERE id = ?", [data, id]);
     return result;
   },

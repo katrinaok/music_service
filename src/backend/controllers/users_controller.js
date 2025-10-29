@@ -1,4 +1,5 @@
 import User from "../models/users_model.js";
+import bcrypt from "bcrypt";
 
 export const loginUser = async (req, res) => {
   try {
@@ -8,12 +9,18 @@ export const loginUser = async (req, res) => {
       return res.status(400).json({ error: "Введіть логін та пароль" });
     }
 
-    const user = await User.findByLogin(identifier, password);
+    const user = await User.findByLogin(identifier);
     if (!user) {
       return res.status(401).json({ error: "Неправильний логін або пароль" });
     }
 
-    res.json(user);
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(401).json({ error: "Неправильний логін або пароль" });
+    }
+    
+    const { password: _, ...safeUser } = user;
+    res.json(safeUser);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
