@@ -40,7 +40,7 @@ CREATE TABLE playlist_tracks (
   FOREIGN KEY (playlist_id) REFERENCES playlists(id) ON DELETE CASCADE,
   FOREIGN KEY (track_id) REFERENCES tracks(id) ON DELETE CASCADE
 );
-
+ 
 CREATE TABLE playlists (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT NOT NULL,

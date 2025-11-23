@@ -1,199 +1,200 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Service</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header>
-        <button id="menu-toggle">☰ Меню</button>
-        <h1>Music Service</h1>
-        
-        <nav id="side-menu" class="side-menu hidden">
-            <ul>
-                <li class="tab active" data-tab="home">Головна</li>
-                <li class="tab" data-tab="profile">Профіль</li>
-                <li class="tab" data-tab="artists">Виконавці</li>
-                <li class="tab" data-tab="albums">Альбоми</li>
-                <li class="tab" data-tab="genres">Жанри</li>
-                <li class="tab" data-tab="tracks">Треки</li>
-                <li class="tab" data-tab="playlists">Плейлісти</li>
-                <li class="tab" data-tab="favorites">Улюблене</li>
-            </ul>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MusicVerse</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
     
-    <div class="container">        
-        <main class="content">
-            <section id="home" class="tab-content active">
-                <section class="welcome-section">
-                    <h1>Ласкаво просимо до MusicVerse!</h1>
-                    <p>Відкрийте для себе улюблену музику, створюйте плейлісти та слідкуйте за новими хітами.</p>
-                    <button id="go-profile">Перейти до профілю</button>
-                </section>
-            </section>
-            
-            <section id="profile" class="tab-content">
-                <h2>Профіль користувача: <span id="current-user-name">—</span></h2>
-                <div id="profile-message" style="margin:10px 0;"></div>
-                <div id="profile-user-list" style="margin-bottom:10px;"></div>
-
-                <section id="profile-user-form" style="margin-bottom:20px;">
-                    <h3 id="profile-user-form-title">Створити користувача</h3>
-                    <form id="profile-create-form">
-                        <input type="text" id="profile-username" placeholder="Ім'я користувача" required>
-                        <input type="email" id="profile-email" placeholder="Email" required>
-                        <input type="password" id="profile-password" placeholder="Пароль" required>
-                        <select id="profile-role">
-                            <option value="user" selected>Користувач</option>
-                            <option value="admin">Адмін</option>
-                        </select>
-                        <button type="submit" id="profile-save-btn" class="btn">Створити акаунт</button>
-                    </form>
-                    
-                    <button id="show-login-btn" class="btn" style="margin-top:10px;">Увійти</button>
-                    <form id="profile-login-form" style="display:none; margin-top:10px;">
-                        <input type="text" id="login-username" placeholder="Ім'я користувача або email" required>
-                        <input type="password" id="login-password" placeholder="Пароль" required>
-                        <button type="submit" id="login-btn" class="btn">Увійти</button>
-                    </form>
+    <body>
+        <header>
+            <button id="menu-toggle">☰ Меню</button>
+            <h1>MusicVerse</h1>
+            <nav id="side-menu" class="side-menu hidden">
+                <ul>
+                    <li class="tab active" data-tab="home">Головна</li>
+                    <li class="tab" data-tab="profile">Профіль</li>
+                    <li class="tab" data-tab="artists">Виконавці</li>
+                    <li class="tab" data-tab="albums">Альбоми</li>
+                    <li class="tab" data-tab="genres">Жанри</li>
+                    <li class="tab" data-tab="tracks">Треки</li>
+                    <li class="tab" data-tab="playlists">Плейлісти</li>
+                    <li class="tab" data-tab="favorites">Улюблене</li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="container">
+            <main class="content">
+                <section id="home" class="tab-content active">
+                    <section class="welcome-section">
+                        <h1>Ласкаво просимо до MusicVerse!</h1>
+                        <p>Відкрийте для себе улюблену музику, створюйте плейлісти та слідкуйте за новими хітами.</p>
+                        <button id="go-profile">Перейти до профілю</button>
+                    </section>
                 </section>
                 
-                <div id="user-content" style="display:none;">
-                    <section id="user-playlists">
-                        <h3>Мої плейлісти
-                            <button id="delete-selected-playlists" class="btn">Видалити вибрані</button>
-                        </h3>
-                        <ul id="user-playlist-list"></ul>
+                <section id="profile" class="tab-content">
+                    <h2>Профіль користувача: <span id="current-user-name">—</span></h2>
+                    <div id="profile-message" style="margin:10px 0;"></div>
+                    <div id="profile-user-list" style="margin-bottom:10px;"></div>
+
+                    <section id="profile-user-form" style="margin-bottom:20px;">
+                        <h3 id="profile-user-form-title">Створити користувача</h3>
+                        <form id="profile-create-form">
+                            <input type="text" id="profile-username" placeholder="Ім'я користувача" required>
+                            <input type="email" id="profile-email" placeholder="Email" required>
+                            <input type="password" id="profile-password" placeholder="Пароль" required>
+                            <select id="profile-role">
+                                <option value="user" selected>Користувач</option>
+                                <option value="admin">Адмін</option>
+                            </select>
+                            <button type="submit" id="profile-save-btn" class="btn">Створити акаунт</button>
+                        </form>
+                        <button id="show-login-btn" class="btn" style="margin-top:10px;">Увійти</button>
+                        <form id="profile-login-form" style="display:none; margin-top:10px;">
+                            <input type="text" id="login-username" placeholder="Ім'я користувача або email" required>
+                            <input type="password" id="login-password" placeholder="Пароль" required>
+                            <button type="submit" id="login-btn" class="btn">Увійти</button>
+                        </form>
                     </section>
                     
-                    <section id="profile-controls" style="margin-top:20px;">
-                        <button id="logout-btn" class="btn">Вийти (змінити користувача)</button>
-                    </section>
-                    
-                    <div id="logout-modal" class="modal-overlay">
-                        <div class="modal">
-                            <p>Що бажаєте зробити?</p>
-                            <div style="display:flex; gap:10px;">
-                                <button id="logout-confirm" class="btn">Вийти</button>
-                                <button id="logout-switch" class="btn">Змінити акаунт</button>
-                                <button id="logout-cancel" class="btn btn-small" style="background:#ccc;color:#333;">Скасувати</button>
+                    <div id="user-content" style="display:none;">
+                        <section id="user-playlists">
+                            <h3>Мої плейлісти
+                                <button id="delete-selected-playlists" class="btn">Видалити вибрані</button>
+                            </h3>
+                            <ul id="user-playlist-list"></ul>
+                        </section>
+                        
+                        <section id="profile-controls" style="margin-top:20px;">
+                            <button id="logout-btn" class="btn">Вийти (змінити користувача)</button>
+                        </section> <div id="logout-modal" class="modal-overlay">
+                            
+                            <div class="modal">
+                                <p>Що бажаєте зробити?</p>
+                                <div style="display:flex; gap:10px;">
+                                    <button id="logout-confirm" class="btn">Вийти</button>
+                                    <button id="logout-switch" class="btn">Змінити акаунт</button>
+                                    <button id="logout-cancel" class="btn btn-small" style="background:#ccc;color:#333;">Скасувати</button>
+                                </div>
+                                <div id="switch-user-list" style="margin-top:10px; display:none;"></div>
                             </div>
-                            <div id="switch-user-list" style="margin-top:10px; display:none;"></div>
                         </div>
                     </div>
-                </div>
-            </section>
-            
-            <section id="playlist-page" style="display:none; padding:20px;">
-                <button id="close-playlist-btn" class="btn">Назад до профілю</button>
-                <div style="display:flex; align-items:center; gap:12px; margin-top:10px;">
-                    <img id="playlist-cover" src="" alt="Обкладинка плейліста" style="width:100px; height:100px; object-fit:cover; border-radius:8px;">
-                    <h2 id="playlist-title"></h2>
-                </div>
+                </section>
                 
-                <div id="playlist-body" style="margin-top:15px;">
-                    <p>Поки що пісень не додано</p>
-                </div>
-                <button id="add-track-btn" class="btn" style="margin-top:10px;">Додати трек</button>
-            </section>
-
-            <section id="artists" class="tab-content">
-                <h2>Виконавці</h2>
-                <form id="artist-form" enctype="multipart/form-data">
-                    <input type="text" id="artist-name" placeholder="Назва виконавця" required>
-                    <textarea id="artist-bio" placeholder="Біографія"></textarea>
-                    <input type="file" id="artist-image" accept="image/*">
-                    <button type="submit" class="btn">Додати</button>
-                </form>
-
-                <div id="artists-actions" style="display:none; margin-bottom:10px;">
-                    <button id="delete-artists-btn" class="btn">Видалити вибраних виконавців</button>
-                </div>
-                <ul id="artist-list"></ul>
-            </section>
-
-            <section id="albums" class="tab-content">
-                <h2>Альбоми</h2>
-                <form id="album-form" enctype="multipart/form-data">
-                    <input type="text" id="album-title" placeholder="Назва альбому" required>
-                    <input type="number" id="album-year" placeholder="Рік" required>
-                    <select id="album-artist">
-                        <option value="">Виберіть виконавця</option>
-                    </select>
-                    <input type="file" id="album-image" accept="image/*">
-                    <button type="submit" class="btn">Додати</button>
-                </form>
-                <ul id="album-list"></ul>
-            </section>
-
-            <section id="genres" class="tab-content">
-                <h2>Жанри</h2>
-                <form id="genre-form">
-                    <input type="text" id="genre-name" placeholder="Назва жанру" required>
-                    <textarea id="genre-description" placeholder="Опис жанру"></textarea>
-                    <button type="submit" class="btn">Додати</button>
-                </form>
-                <ul id="genre-list"></ul>
-            </section>
-
-            <section id="tracks" class="tab-content">
-                <h2>Треки</h2>
-                <form id="track-form" enctype="multipart/form-data">
-                    <input type="text" id="track-title" placeholder="Назва треку" required>
-                    <select id="track-genre" required>
-                        <option value="">Оберіть жанр</option>
-                    </select>
-                    <select id="track-artist" required>
-                        <option value="">Оберіть виконавця</option>
-                    </select>
-                    <select id="track-album">
-                        <option value="">Оберіть альбом</option>
-                    </select>
-                    <input type="file" id="track-file" accept="audio/*" required>
-                    <button type="submit" class="btn">Додати трек</button>
-                </form>
-                <ul id="track-list-main"></ul>
-                
-                <div id="add-track-modal" class="modal-overlay">
-                    <div class="modal">
-                        <p>Куди додати цей трек?</p>
-                        <button id="add-to-favorites-btn" class="btn">Улюблене</button>
-                        <select id="add-to-playlist-select">
-                            <option value="">Оберіть плейліст</option>
-                        </select>
-                        <button id="add-to-playlist-btn" class="btn">Додати</button>
-                        <button id="add-modal-close-btn" class="btn btn-small">Скасувати</button>
+                <section id="playlist-page" style="display:none; padding:20px;">
+                    <button id="close-playlist-btn" class="btn">Назад до профілю</button>
+                    <div style="display:flex; align-items:center; gap:12px; margin-top:10px;">
+                        <img id="playlist-cover" src="" alt="Обкладинка плейліста" style="width:100px; height:100px; object-fit:cover; border-radius:8px;">
+                        <h2 id="playlist-title"></h2>
                     </div>
-                </div>
-            </section>
-
-             <section id="playlists" class="tab-content">
-                <h2>Плейлісти</h2>
-                <form id="playlist-form" style="display:flex; flex-direction:column; gap:8px; margin-bottom:10px;">
-                    <input type="text" id="playlist-name" placeholder="Назва плейліста" required>
-                    <textarea id="playlist-description" placeholder="Опис плейліста"></textarea>
-                    <input type="file" id="playlist-image" accept="image/*">
-                    <button type="submit" class="btn">Створити плейліст</button>
-                </form>
-                <ul id="playlist-list"></ul>
-            </section>
-
-            <section id="favorites" class="tab-content">
-                <h2>Улюблене</h2>
-                <ul id="favorite-list"></ul>
-            </section>
-        </main>
-        <div id="messages"></div>
-    </div>
-    
-    <footer>
-        <p>&copy; 2025 Music Verse. Всі права захищені.</p>
-        <p>Зв'язок: <a href="https://mail.google.com/mail/?view=cm&to=ekaterinalysyak2006@gmail.com" target="_blank">ekaterinalysyak2006@gmail.com</a></p>
-    </footer>
-    
-    <script src="assets/js/script.js"></script>
-</body>
+                
+                    <div id="playlist-body" style="margin-top:15px;">
+                        <p>Поки що пісень не додано</p>
+                    </div>
+                    <button id="add-track-btn" class="btn" style="margin-top:10px;">Додати трек</button>
+                </section>
+                
+                <section id="artists" class="tab-content">
+                    <h2>Виконавці</h2>
+                    <form id="artist-form" enctype="multipart/form-data">
+                        <input type="text" id="artist-name" placeholder="Назва виконавця" required>
+                        <textarea id="artist-bio" placeholder="Біографія"></textarea>
+                        <input type="file" id="artist-image" accept="image/*">
+                        <button type="submit" class="btn">Додати</button>
+                    </form>
+                    
+                    <div id="artists-actions" style="display:none; margin-bottom:10px;">
+                        <button id="delete-artists-btn" class="btn">Видалити вибраних виконавців</button>
+                    </div>
+                    <ul id="artist-list"></ul>
+                </section>
+                
+                <section id="albums" class="tab-content">
+                    <h2>Альбоми</h2>
+                    <form id="album-form" enctype="multipart/form-data">
+                        <input type="text" id="album-title" placeholder="Назва альбому" required>
+                        <input type="number" id="album-year" placeholder="Рік" required>
+                        <select id="album-artist">
+                            <option value="">Виберіть виконавця</option>
+                        </select>
+                        <input type="file" id="album-image" accept="image/*">
+                        <button type="submit" class="btn">Додати</button>
+                    </form>
+                    <ul id="album-list"></ul>
+                </section>
+                
+                <section id="genres" class="tab-content">
+                    <h2>Жанри</h2>
+                    <form id="genre-form">
+                        <input type="text" id="genre-name" placeholder="Назва жанру" required>
+                        <textarea id="genre-description" placeholder="Опис жанру"></textarea>
+                        <button type="submit" class="btn">Додати</button>
+                    </form>
+                    <ul id="genre-list"></ul>
+                </section>
+                
+                <section id="tracks" class="tab-content">
+                    <h2>Треки</h2>
+                    <form id="track-form" enctype="multipart/form-data">
+                        <input type="text" id="track-title" placeholder="Назва треку" required>
+                        <select id="track-genre" required>
+                            <option value="">Оберіть жанр</option>
+                        </select>
+                        
+                        <select id="track-artist" required>
+                            <option value="">Оберіть виконавця</option>
+                        </select>
+                        
+                        <select id="track-album">
+                            <option value="">Оберіть альбом</option>
+                        </select>
+                        <input type="file" id="track-file" accept="audio/*" required>
+                        <button type="submit" class="btn">Додати трек</button>
+                    </form>
+                    <ul id="track-list-main"></ul>
+                    
+                    <div id="add-track-modal" class="modal-overlay">
+                        <div class="modal">
+                            <p>Куди додати цей трек?</p>
+                            <button id="add-to-favorites-btn" class="btn">Улюблене</button>
+                            <select id="add-to-playlist-select">
+                                <option value="">Оберіть плейліст</option>
+                            </select>
+                            <button id="add-to-playlist-btn" class="btn">Додати</button>
+                            <button id="add-modal-close-btn" class="btn btn-small">Скасувати</button>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="playlists" class="tab-content">
+                    <h2>Плейлісти</h2>
+                    <form id="playlist-form" style="display:flex; flex-direction:column; gap:8px; margin-bottom:10px;">
+                        <input type="text" id="playlist-name" placeholder="Назва плейліста" required>
+                        <textarea id="playlist-description" placeholder="Опис плейліста"></textarea>
+                        <input type="file" id="playlist-image" accept="image/*">
+                        <button type="submit" class="btn">Створити плейліст</button>
+                    </form>
+                    <ul id="playlist-list"></ul>
+                </section>
+                
+                <section id="favorites" class="tab-content">
+                    <h2>Улюблене</h2>
+                    <ul id="favorite-list"></ul>
+                </section>
+            </main>
+            
+            <div id="messages"></div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Music Verse. Всі права захищені.</p>
+            <p>Зв'язок: <a href="https://mail.google.com/mail/?view=cm&to=ekaterinalysyak2006@gmail.com" target="_blank">ekaterinalysyak2006@gmail.com</a></p>
+        </footer>
+        
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>

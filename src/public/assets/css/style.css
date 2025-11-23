@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 header {
@@ -78,8 +78,7 @@ nav li {
     transition: all 0.3s;
 }
 
-nav li:hover,
-nav li.active {
+nav li:hover, nav li.active {
     background: #a58dd0;
     border-left: 4px solid #d7c8f0;
 }
@@ -187,8 +186,7 @@ main {
 }
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {opacity: 0;} to {opacity: 1;}
 }
 
 form {
@@ -327,8 +325,7 @@ input[type="file"]::file-selector-button:hover {
 }
 
 @keyframes slideIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); }
 }
 
 #add-to-playlist-select {
@@ -468,10 +465,10 @@ tr:nth-child(even) {
     transition: opacity 0.3s ease-in-out;
 }
 
-footer { 
-    text-align: center; 
-    padding: 20px; 
-    background: #7c5fbf; 
-    color: #fff; 
-    box-shadow: 0 -2px 6px rgba(0,0,0,0.1); 
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #7c5fbf;
+    color: #fff;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
 }

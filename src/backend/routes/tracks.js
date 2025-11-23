@@ -1,11 +1,13 @@
 import express from "express";
+
 import {
   getAllTracks,
   getTrackById,
   createTrack,
   updateTrack,
   deleteTrack,
-} from "../controllers/tracks_controller.js";
+} from "../controllers/TrackController.js";
+
 import { uploadTrackFile } from "../middlewares/upload.js";
 
 const router = express.Router();

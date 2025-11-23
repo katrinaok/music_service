@@ -1,11 +1,12 @@
 import express from "express";
+
 import {
   getAllGenres,
   getGenreById,
   createGenre,
   updateGenre,
   deleteGenre,
-} from "../controllers/genres_controller.js";
+} from "../controllers/GenreController.js";
 
 const router = express.Router();
 

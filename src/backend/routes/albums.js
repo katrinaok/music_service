@@ -1,11 +1,13 @@
 import express from "express";
+
 import {
   getAllAlbums,
   getAlbumById,
   createAlbum,
   updateAlbum,
   deleteAlbum,
-} from "../controllers/albums_controller.js";
+} from "../controllers/AlbumController.js";
+
 import { uploadAlbumImage } from "../middlewares/upload.js";
 
 const router = express.Router();

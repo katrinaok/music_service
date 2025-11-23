@@ -1,10 +1,11 @@
 import express from "express";
+
 import {
   getAllPlaylistTracks,
   getPlaylistTracks,
   addTrackToPlaylist,
   deleteTrackFromPlaylist
-} from "../controllers/playlist_tracks_controller.js";
+} from "../controllers/PlaylistTrackController.js";
 
 const router = express.Router();
 

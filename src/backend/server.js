@@ -15,7 +15,6 @@ import playlistTracksRoutes from "./routes/playlist_tracks.js";
 import playlistsRoutes from "./routes/playlists.js";
 import tracksRoutes from "./routes/tracks.js";
 import usersRoutes from "./routes/users.js";
-
 export const db = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,

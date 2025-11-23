@@ -1,11 +1,13 @@
 import express from "express";
+
 import {
   getAllArtists,
   getArtistById,
   createArtist,
   updateArtist,
   deleteArtist
-} from "../controllers/artists_controller.js";
+} from "../controllers/ArtistController.js";
+
 import { uploadArtistImage } from "../middlewares/upload.js";
 
 const router = express.Router();

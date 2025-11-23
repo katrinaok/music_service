@@ -1,4 +1,5 @@
 import express from "express";
+
 import {
   getAllPlaylists,
   getPlaylistById,
@@ -6,7 +7,8 @@ import {
   createPlaylist,
   updatePlaylist,
   deletePlaylist,
-} from "../controllers/playlists_controller.js";
+} from "../controllers/PlaylistController.js";
+
 import { uploadPlaylistImage } from "../middlewares/upload.js";
 
 const router = express.Router();
